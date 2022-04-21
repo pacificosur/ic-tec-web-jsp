@@ -69,7 +69,7 @@ public class CarreraControllerServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/carrera/list.jsp");
         this.service = new CarreraServiceImpl();
         List<Carrera> listaCarrera = this.service.obtenerRegistros();
-        request.setAttribute("listaCarreras", listaCarrera);
+        request.setAttribute("listaCarrera", listaCarrera);
         dispatcher.forward(request, response);
     }
-}
+
