@@ -18,7 +18,7 @@ public class CarreraControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getParameter("action");
+        String ction = request.getParameter("action");
         System.out.println("swhitch: " + action);
         switch (action) {
             case "index":
