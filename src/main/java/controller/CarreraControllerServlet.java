@@ -18,7 +18,7 @@ public class CarreraControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String ction = request.getParameter("action");
+        String action = request.getParameter("action");
         System.out.println("swhitch: " + action);
         switch (action) {
             case "index":
@@ -69,7 +69,7 @@ public class CarreraControllerServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/carrera/list.jsp");
         this.service = new CarreraServiceImpl();
         List<Carrera> listaCarrera = this.service.obtenerRegistros();
-        request.setAttribute("listaCarrera", listaCarrera);
+        request.setAttribute("listaCarreras", listaCarrera);
         dispatcher.forward(request, response);
     }
 }
